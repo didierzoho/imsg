@@ -61,13 +61,40 @@ func Open(ctx context.Context, path string) (*sql.DB, error) {
 	dsn := fmt.Sprintf("file:%s?_pragma=busy_timeout(5000)&mode=ro&immutable=1", filepath.Clean(path))
 	db, err := sql.Open("sqlite", dsn)
 	if err != nil {
-		return nil, err
+		return nil, enhanceError(err, path)
 	}
 	if err := db.PingContext(ctx); err != nil {
 		db.Close()
-		return nil, err
+		return nil, enhanceError(err, path)
 	}
 	return db, nil
+}
+
+// enhanceError adds helpful context for common permission/access errors.
+func enhanceError(err error, path string) error {
+	errStr := err.Error()
+	
+	// SQLite error 14 (SQLITE_CANTOPEN) and "authorization denied" both indicate permission issues
+	if strings.Contains(errStr, "out of memory (14)") || 
+	   strings.Contains(errStr, "authorization denied") ||
+	   strings.Contains(errStr, "unable to open database") {
+		return fmt.Errorf(`%w
+
+⚠️  Permission Error: Cannot access Messages database
+
+The Messages database at %s requires Full Disk Access permission.
+
+To fix:
+1. Open System Settings → Privacy & Security → Full Disk Access
+2. Add your terminal application (Terminal.app, iTerm, etc.)
+3. Restart your terminal
+4. Try again
+
+Note: This is required because macOS protects the Messages database.
+For more details, see: https://github.com/steipete/imsg#permissions-troubleshooting`, err, path)
+	}
+	
+	return err
 }
 
 // ListChats returns chats ordered by most recent activity.
